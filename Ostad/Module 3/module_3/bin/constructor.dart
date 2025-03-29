@@ -10,5 +10,6 @@ class Car {
   int year;
 
   //Constructor
+  //this syntax is used to remove the ?(nullabale symbol)
   Car(this.brand, this.model, this.year);
 }

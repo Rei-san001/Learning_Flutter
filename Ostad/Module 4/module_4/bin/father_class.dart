@@ -1,3 +1,5 @@
+//inheritance 1
+
 class Father {
   String name;
   String land = 'Some land';

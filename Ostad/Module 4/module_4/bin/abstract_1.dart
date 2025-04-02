@@ -1,5 +1,3 @@
-import 'dart:collection';
-
 abstract class Student {
   //abstract method
   //if we want to make a method abstract then we have to remove the body
@@ -67,6 +65,6 @@ main() {
   print(gojo is BusinessMan);
   print(madara is BusinessMan);
 
-  print(gojo is Student);
-  print(madara is Student);
+  // print(gojo is Student);
+  // print(madara is Student);
 }

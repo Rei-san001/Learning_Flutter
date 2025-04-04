@@ -17,11 +17,11 @@ class Person extends Student {
 
   @override
   void attendClass() {
-    print("$name joined class");
+    print("$name has joined the class");
   }
 }
 
-//when using implement we have override every method in parent class
+//when using implement we have to override every method in parent class
 class BusinessMan implements Student {
   String name;
   BusinessMan(this.name);

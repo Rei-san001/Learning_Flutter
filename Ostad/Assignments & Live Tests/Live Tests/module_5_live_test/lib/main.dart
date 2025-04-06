@@ -1,4 +1,4 @@
-main() {
+void main() {
   List students = [
     {
       "name": "Alice",
@@ -28,19 +28,23 @@ main() {
 
     double avg1 = total / scores.length;
 
-    //took help from online to know how to fix decimal
+    //took help from online for this line
     avg1 = double.parse(avg1.toStringAsFixed(2));
+
     avg[name] = avg1;
   }
 
-  List sortedList = avg.entries.toList();
+  var entries = avg.entries;
 
-  //took help from online for this line
-  sortedList.sort((a, b) => b.value.compareTo(a.value));
+  List sortedList = entries.toList();
+
+  //took help from online to know how to sort
+  sortedList.sort((a, b) {
+    return b.value.compareTo(a.value);
+  });
 
   for (int i = 0; i < sortedList.length; i++) {
     var entry = sortedList[i];
-
     print('  "${entry.key}": ${entry.value},');
   }
 }

@@ -28,17 +28,15 @@ main() {
 
     double avg1 = total / scores.length;
 
-    avg1 = double.parse(
-      avg1.toStringAsFixed(2),
-    ); //took help from online to know how to fix decimal
+    //took help from online to know how to fix decimal
+    avg1 = double.parse(avg1.toStringAsFixed(2));
     avg[name] = avg1;
   }
 
   List sortedList = avg.entries.toList();
 
-  sortedList.sort(
-    (a, b) => b.value.compareTo(a.value),
-  ); //took help from online for this line
+  //took help from online for this line
+  sortedList.sort((a, b) => b.value.compareTo(a.value));
 
   for (int i = 0; i < sortedList.length; i++) {
     var entry = sortedList[i];

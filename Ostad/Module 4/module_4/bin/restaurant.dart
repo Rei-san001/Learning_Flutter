@@ -1,7 +1,7 @@
 class Restaurant {
   String name;
   String location = 'Dhaka';
-  int _id = 202343;
+  int _id = 20234;
 
   Restaurant(this.name);
 

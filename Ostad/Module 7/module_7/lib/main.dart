@@ -78,7 +78,14 @@ class Home extends StatelessWidget {
               onPressed: () {
                 print('CLICK ME FROM TEXT BUTTON');
               },
-              child: Text('CLICK ME'),
+              child: Text(
+                'CLICK ME',
+                style: TextStyle(
+                  fontSize: 50,
+                  color: Colors.deepPurple,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
 
             Text(

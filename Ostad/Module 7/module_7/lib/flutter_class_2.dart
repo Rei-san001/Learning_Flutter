@@ -67,37 +67,37 @@ class FlutterClass2 extends StatelessWidget {
 
             SizedBox(height: 10),
 
-
-
-              Text(
-                //softwrap also does the same thing as overflow
-                //softWrap: true,
-                maxLines: 3,
-                //if there's too much text then we use this
-                overflow: TextOverflow.ellipsis,
-                'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like',
-              ),
+            Text(
+              //softwrap also does the same thing as overflow
+              //softWrap: true,
+              maxLines: 3,
+              //if there's too much text then we use this
+              overflow: TextOverflow.ellipsis,
+              'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like',
+            ),
 
             Container(
+              alignment: Alignment.topCenter,
+              //what margin does is it adjusts itself
+              //from every direction with 20 pixels
+              //left, bottom, top everything
+              margin: EdgeInsets.all(50),
               width: 200,
               height: 200,
-              //color: Colors.red,
 
+              //color: Colors.red,
               decoration: BoxDecoration(
                 color: Colors.teal,
                 borderRadius: BorderRadius.circular(10),
-                border: Border.all(
-                  width: 2,
-                  color: Colors.redAccent,
-                ),
+                border: Border.all(width: 2, color: Colors.redAccent),
                 //boxshadow in curly braces
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey,
-                      offset: Offset(5, 10),
-                      blurRadius: 10,
-                    )
-                ]
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey,
+                    offset: Offset(5, 10),
+                    blurRadius: 10,
+                  ),
+                ],
               ),
 
               child: Center(
@@ -105,30 +105,20 @@ class FlutterClass2 extends StatelessWidget {
                   children: [
                     Text(
                       'This is a Container',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.white,
-                      ),
+                      style: TextStyle(fontSize: 20, color: Colors.white),
                     ),
                     Text(
                       'This is a Container',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.white,
-                      ),
+                      style: TextStyle(fontSize: 20, color: Colors.white),
                     ),
                     Text(
                       'This is a Container',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.white,
-                      ),
+                      style: TextStyle(fontSize: 20, color: Colors.white),
                     ),
                   ],
                 ),
               ),
-            )
-
+            ),
           ],
         ),
       ),

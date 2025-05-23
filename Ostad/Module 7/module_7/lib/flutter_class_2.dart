@@ -5,6 +5,7 @@ class FlutterClass2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController phoneController = TextEditingController();
     return Scaffold(
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
@@ -39,19 +40,19 @@ class FlutterClass2 extends StatelessWidget {
 
               //if i wanna use the whole screen
               //width: double.infinity,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green,
-                  foregroundColor: Colors.black,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                ),
-                onPressed: () {
-                  print('Elevated Button Pressed');
-                },
-                child: Text('Elevated Button'),
-              ),
+              // child: ElevatedButton(
+              //   style: ElevatedButton.styleFrom(
+              //     backgroundColor: Colors.green,
+              //     foregroundColor: Colors.black,
+              //     shape: RoundedRectangleBorder(
+              //       borderRadius: BorderRadius.circular(10),
+              //     ),
+              //   ),
+              //   onPressed: () {
+              //     print('Elevated Button Pressed');
+              //   },
+              //   child: Text('Elevated Button'),
+              // ),
             ),
 
             OutlinedButton(onPressed: () {}, child: Text('Outline Button')),
@@ -65,11 +66,7 @@ class FlutterClass2 extends StatelessWidget {
               child: Text('This is a text'),
             ),
 
-            SizedBox(height: 10),
 
-
-
-            
             // Text(
             //   //softwrap also does the same thing as overflow
             //   //softWrap: true,
@@ -124,37 +121,58 @@ class FlutterClass2 extends StatelessWidget {
             // ),
 
 
-            SizedBox(height: 25),
+            SizedBox(height: 25,),
             Padding(
-              padding: const EdgeInsets.only(left: 8, right: 8),
+              padding: const EdgeInsets.only(top: 12),
               child: TextField(
+                controller: phoneController,
                 //we can also change the input type
                 keyboardType: TextInputType.number,
 
                 //to make the text hidden like pass
                 //we gonna use the obsecure
-                obscureText: true,
+                //obscureText: true,
                 decoration: InputDecoration(
                   //hintText: 'Enter Your Name',
                   hintText: 'Enter Your Number',
                   labelText: 'Phone Number',
                   prefix: Icon(Icons.phone),
+                  suffix: Icon(Icons.check),
                   labelStyle: TextStyle(color: Colors.blue, fontSize: 20),
                   border: OutlineInputBorder(),
                 ),
               ),
             ),
+
+            SizedBox(
+              height: 20,
+            ),
+
+            ElevatedButton(onPressed: () {
+
+              if(phoneController.text.isEmpty){
+                print('Please Enter Your Phone Number');
+              }
+              else if(phoneController.text.length<11){
+                print('Enter the number properly');
+              }
+              else {
+                print('Your Number ${phoneController.text}');
+              }
+
+
+            }, child: Text('Submit')),
           ],
         ),
       ),
 
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          print('Floating Action Button Pressed');
-        },
-        backgroundColor: Colors.cyan,
-        child: Icon(Icons.add),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {
+      //     print('Floating Action Button Pressed');
+      //   },
+      //   backgroundColor: Colors.cyan,
+      //   child: Icon(Icons.add),
+      // ),
     );
   }
 }
